@@ -1,0 +1,536 @@
+@charset "UTF-8";
+
+html {
+    font-size: 100%;
+}
+
+body {
+    color: #121212;
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+a {
+    color:#121212;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    padding-inline-start: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.wrapper {
+    max-width: 900px;
+    padding: 80px 20px;
+    margin: 0 auto;
+}
+
+.site-title {
+    line-height: 1px;
+    margin-top: 18px;
+    font-size: 20px;
+}
+
+.site-title a {
+    display: block;
+}
+
+.sec-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.75rem;
+    margin-bottom: 60px;
+    text-align: center;
+    color: #fff;
+    letter-spacing: 3px;
+  }
+  .sec-title::before,
+  .sec-title::after {
+    border-top: 1px solid;
+    content: "";
+    width: 28%;
+  }
+
+#header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    position: fixed;
+    z-index: 10;
+    background-color: #fff;
+    height: 80px;
+}
+
+#navi {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    bottom: 0;
+    width: 250px;
+    color: #fff;
+    padding: 60px 25px;
+    background-color: #121212;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    transition: all .5s;
+    z-index: 20;
+    opacity: 0;
+}
+
+#navi a {
+    color: #fff;
+}
+
+.open #navi {
+    left:0;
+    opacity: 1;
+}
+
+#navi ul {
+    margin: 0;
+    opacity: 1;
+}
+
+#navi ul.nav-menu {
+    margin-bottom: 60px;
+    border-top: solid 1px #fff;
+}
+
+#navi ul.nav-menu li {
+    position: relative;
+    margin: 0;
+    padding: 20px 0;
+    border-bottom: solid 1px #fff;
+}
+
+#navi ul.nav-sns li {
+    padding: 5px 0;
+}
+
+.toggle_btn {
+    display: block;
+    position: fixed;
+    top: 25px;
+    right: 45px;
+    width: 30px;
+    height: 30px;
+    transition: all .5s;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.toggle_btn span {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: #333;
+    border-radius: 4px;
+    transition: all .5s;
+}
+
+.toggle_btn span:nth-child(1) {
+    top: 4px;
+}
+
+.toggle_btn span:nth-child(2) {
+    top: 14px;
+}
+
+.toggle_btn span:nth-child(3) {
+    bottom: 4px;
+}
+
+.open .toggle_btn span {
+    background-color: #fff;
+}
+
+.open .toggle_btn span:nth-child(1) {
+    -webkit-transform: translateY(10px) rotate(-315deg);
+    transform: translateY(10px) rotate(-315deg);
+}
+
+.open .toggle_btn span:nth-child(2) {
+    opacity: 0;
+}
+
+.open .toggle_btn span:nth-child(3) {
+    -webkit-transform: translateY(-10px) rotate(315deg);
+    transform: translateY(-10px) rotate(315deg);
+}
+
+#mask {
+    display: none;
+    transition: all .5s;
+}
+
+.open #mask {
+    display: block;
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .8;
+    z-index: 10;
+    cursor: pointer;
+}
+
+#main {
+    padding-top: 80px;
+}
+
+#video {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+#video .bg-video {
+    position: fixed;
+    z-index: -10;
+}
+.welcome {
+    color: #fff;
+    display: none;
+    justify-content: center;
+    font-size: 4.0rem;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    text-shadow: 3px 3px 3px #fff;
+    border-bottom:2px solid #fff;
+   
+}
+
+/*スクロールダウン全体の場所*/
+.scrolldown1{
+    /*描画位置※位置は適宜調整してください*/
+  position:absolute;
+  left:50%;
+  bottom:100px;
+    /*全体の高さ*/
+  height:50px;
+}
+
+/*Scrollテキストの描写*/
+.scrolldown1 span{
+    /*描画位置*/
+  position: absolute;
+  left:-15px;
+  top: -15px;
+    /*テキストの形状*/
+  color: #eee;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+}
+
+/* 線の描写 */
+.scrolldown1::after{
+  content: "";
+    /*描画位置*/
+  position: absolute;
+  top: 0;
+    /*線の形状*/
+  width: 1px;
+  height: 40px;
+  background: #eee;
+    /*線の動き1.4秒かけて動く。永遠にループ*/
+  animation: pathmove 1.4s ease-in-out infinite;
+  opacity:0;
+}
+
+#profile {
+    background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.8));
+    color: #fff;
+}
+
+.detail {
+    padding: 100px 0;
+    justify-content: space-between;
+    display: flex;
+}
+
+.detail-list {
+    font-size: 1.5rem;
+}
+
+.detail-list li {
+    margin-bottom: 20px;
+}
+
+.my-photo {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+}
+
+#works {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+#works .works-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 100px;
+}
+
+#works .works-list li {
+    width: 47%;
+    border: solid 1px #fff;
+    margin-bottom: 80px;
+    position: relative;
+}
+
+#works .works-list li:last-child,
+#works .works-list li:nth-last-child(2) {
+  margin-bottom: 0;
+}
+#works .works-list li a {
+  display: block;
+}
+
+#works .works-list li a::after {
+  content: "";
+  box-shadow: 0 -30px 15px -1px #2e2e2e inset;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#works .works-list .name {
+    color: #fff;
+    font-size: 0.75rem;
+    position: absolute;
+    bottom: 4px;
+    left: 7px;
+    z-index: 5;
+  }
+
+#service {
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding-bottom: 80px;
+}
+
+#service .service-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+#service .service-list li {
+    width: 30%;
+    font-size: 0.875rem;
+    text-align: center;
+}
+
+#service .service-list li a {
+    width: 100%;
+    border: solid 1px #fff;
+    border-radius: 50%;
+    color: #fff;
+    display: block;
+    padding: calc(50% - 11px) 0;
+    margin-bottom: 15px;
+    text-align: center;
+    position: relative;
+    /* ホバー時用の要素を隠すために設定 */
+    overflow: hidden;
+}
+
+#service .service-list li a::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    opacity: 0.3;
+    transition: 0.5s;
+}
+
+#service .service-list li a:hover::before {
+    left: 0;
+}
+
+#service .service-list .title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#contact {
+    background-color: #fff;
+    padding-bottom: 80px;
+}
+
+#contact .sec-title {
+    color: #000;
+}
+
+#contact .link {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+
+#contact .link .item {
+    width: 30%;
+    border: solid 1px #121212;
+    display: block;
+    font-size: 0.875rem;
+    position: relative;
+    padding: 50px 0;
+    text-align: center;
+    transition: 0.1s;
+}
+
+#contact .link .item::before {
+    content: "";
+    border-top: 20px solid transparent;
+    border-right: 20px solid #121212;
+    position: absolute;
+    right: 4px;
+    bottom: 4px;
+}
+
+#contact .link .item:hover {
+    outline: solid 3px #121212;
+}
+
+#contact .link .item img {
+    margin-bottom: 5px;
+    width: 30px;
+}
+#contact .wrapper {
+    position: relative;
+}
+.conta {
+    position: absolute;
+    bottom: -60px;
+}
+
+#footer {
+    background-color: #121212;
+    color: #fff;
+    padding: 20px 0;
+}
+
+#footer .menu {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0 60px 0;
+    color: #fff;
+}
+
+#footer .menu li {
+    border-right: solid 1px #fff;
+    font-size: 0.875rem;
+    padding: 0 20px;
+    margin-left: 0px;
+}
+
+#footer .menu li:last-child {
+    border-right: none;
+}
+
+#footer .menu li a {
+    color: #fff;
+    margin-left: 0px;
+}
+
+#footer .copyright {
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+@keyframes pathmove{
+    0%{
+      height:0;
+      top:0;
+      opacity: 0;
+    }
+    30%{
+      height:30px;
+      opacity: 1;
+    }
+    100%{
+      height:0;
+      top:50px;
+      opacity: 0;
+    }
+  }
+
+@media screen and (max-width: 960px){
+    
+    .sec-title {
+        font-size: 0.9rem;
+    }
+
+    .welcome {
+        font-size: 2.0rem;
+    }
+
+    .my-photo {
+        display: none;
+    }
+
+    .bg-video {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+    }
+
+    #works .works-list {
+        flex-direction: column;
+    }
+
+    #works .works-list li {
+        width: 100%;
+        height: 300px;
+        margin-bottom: 30px;
+        overflow: hidden;
+    }
+
+    .works-list img {
+        width: 100%;
+
+    }
+
+    #works .works-list li:nth-last-child(2) {
+        margin-bottom: 30px;
+    }
+
+    #contact .link {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    #contact .link .item {
+        width: 60%;
+        margin: 20px 0 0 0;
+    }
+
+    #contact .link .item:first-child {
+        margin-top: 0;
+    }
+}
