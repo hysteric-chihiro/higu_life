@@ -64,7 +64,23 @@
           <p class="info-date-ja">
             Occupation: University Student<br>
             Skills: HTML, CSS, Jquery
+            License: ITパスポート
           </p>
+        </section>
+        
+        <section id ="about">
+            <div class="img inview fadein">
+              <img src="img/about.jpg" alt="">
+            </div>
+
+            <div class="text inview fadein">
+              <p>
+                東京の東京電機大学に通う大学3年生です。
+                コーディングではHTML&CSSやJavaScript、JQueryを触ることが多いです。
+                現在、独学でWeb制作を勉強しながら、長期インターンに参加予定です。
+                他にもRuby, Pythonもちょこちょこ触っています。
+              </p>
+            </div>
         </section>
 
         
@@ -116,6 +132,32 @@
           <div class="btn2">
             <a class = "btn insta" href = "https://www.instagram.com/hysteric_chihiro/">Instagram</a>
             <img class="iconi" src="img/insta.jpg">
+          </div>
+          <div class="contact-wrapper">
+            <form id="contact-form" class="form-horizontal" role="form">
+       
+              <div class="form-group">
+                <div class="col-sm-12">
+                  <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value="" required>
+                </div>
+              </div>
+        
+              <div class="form-group">
+                <div class="col-sm-12">
+                  <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="" required>
+                </div>
+              </div>
+        
+              <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message" required></textarea>
+              
+              <button class="btn btn-primary send-button" id="send_Doc" type="submit" value="SEND">
+                <div class="alt-send-button">
+                  <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
+                </div>
+              </button>
+              
+            </form>
+
           </div>
         </section>
 
