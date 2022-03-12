@@ -225,6 +225,32 @@ li {
   font-size: 1.125rem;
 }
 
+#about {
+  display: flex;
+  margin-bottom: 120px;
+}
+
+#about .img {
+  margin-left: 100px;
+  
+}
+
+#about .img img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+#about .text {
+  width: 45%;
+  padding: 150px 5% 0 5%;
+}
+
+#about .text p {
+  line-height: 2.2;
+}
+
 
 #works {
   margin-bottom: 480px;
@@ -343,8 +369,8 @@ li {
   transition: 0.7s;
 }
 
-#contact .btn::before, 
-#contact .btn::after {
+#contact .btna::before, 
+#contact .btna::after {
   content: "";
   position: absolute;
   right: -40px;
@@ -354,24 +380,93 @@ li {
 }
 
 
-#contact .btn::before {
+#contact .btna::before {
   width: 120px;
   top: 48px;
 }
 
-#contact .btn::after {
+#contact .btna::after {
   width: 15px;
   top: 45px;
   transform: rotate(25deg);
 }
 
-#contact .btn:hover {
+#contact .btna:hover {
   opacity: 0.7;
 }
 
-#contact .btn:hover::before,
-#contact .btn:hover::after {
+#contact .btna:hover::before,
+#contact .btna:hover::after {
   right: -50px;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  max-width: 840px;
+}
+
+
+.form-horizontal {
+  max-width: 800px;
+  font-weight: 400;
+}
+
+.form-control, 
+textarea {
+  max-width: 800px;
+  background-color: #000;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+input, textarea {
+  border: 1px solid #fff;
+  border-radius: 5px;
+  width: 800px;
+}
+
+input {
+  height:40px;
+  margin-bottom: 20px;
+}
+
+textarea {
+  height: 200px;
+  margin-bottom: 20px;
+}
+
+.send-button {
+  margin-top: 15px;
+  height: 34px;
+  width: 400px;
+  overflow: hidden;
+  transition: all .2s ease-in-out;
+  color: #fff;
+  border: 1px solid#fff;
+  height: 45px;
+  border-radius: 5px;
+}
+
+.alt-send-button {
+  width: 400px;
+  height: 34px;
+  transition: all .2s ease-in-out;
+}
+
+.send-text {
+  display: block;
+  margin-top: 20px;
+  font: 700 12px 'Lato', sans-serif;
+  letter-spacing: 2px;
+}
+
+.alt-send-button:hover {
+  transform: translate3d(0px, -29px, 0px);
 }
 
 #footer {
@@ -415,6 +510,27 @@ li {
 
   #profile .info-place{
     font-size: 2rem;
+  }
+  
+  #about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #about .img {
+    margin-left: 0px; 
+    width: 100%;
+  }
+
+  #about .img img{
+    width: 80%;
+    border-radius: 50%;
+  }
+
+  #about .text {
+    padding-top: 30px;
+    width: 100%;
   }
 
   #works {
@@ -465,6 +581,14 @@ li {
 
   #footer .sns {
     margin-bottom: 30px;
+  }
+  
+  .contact-wrapper {
+    justify-content: center;
+  }
+
+  input, textarea {
+    width: 400px;
   }
 
 }
