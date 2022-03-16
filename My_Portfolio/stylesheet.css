@@ -586,8 +586,8 @@ textarea {
     justify-content: center;
   }
   
-  .btn {
-    justify-content: center;
+  .send-text {
+    text-align: center;
   }
 
   #footer {
