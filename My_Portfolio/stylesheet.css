@@ -488,6 +488,11 @@ textarea {
 
 
 @media screen and (max-width: 900px) {
+  
+  .container {
+    overflow: hidden;
+  }
+  
   .site-title {
     font-size: 3rem;
     margin: 50px 0;
