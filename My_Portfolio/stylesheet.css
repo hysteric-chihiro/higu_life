@@ -520,7 +520,7 @@ textarea {
   #about .img {
     margin-left: 50px;
     width:80%;
-    width: 100%;
+    justify-content: center;
   }
 
   #about .img img{
