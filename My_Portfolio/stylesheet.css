@@ -586,8 +586,9 @@ textarea {
     justify-content: center;
   }
   
-  .send-text {
-    text-align: center;
+  .send-text, .fa-paper-plane{
+    align-items: center;
+    justify-content: center;
   }
 
   #footer {
