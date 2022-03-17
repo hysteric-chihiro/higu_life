@@ -232,7 +232,6 @@ li {
 
 #about .img {
   margin-left: 100px;
-  
 }
 
 #about .img img {
@@ -249,7 +248,6 @@ li {
 #about .text p {
   line-height: 2.2;
 }
-
 
 #works {
   margin-bottom: 480px;
@@ -329,7 +327,7 @@ li {
   font-size: 1.0rem;
 }
 
-#contact .btn {
+#contact .btna {
   width: 400px;
   border: solid 1px #7d7d7d;
   color: #fff;
@@ -398,13 +396,12 @@ li {
 #contact .btna:hover::after {
   right: -50px;
 }
-
 .contact-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin: 0 auto;
-  padding: 20px;
+  padding: 0px;
   position: relative;
   max-width: 840px;
 }
@@ -432,6 +429,7 @@ input, textarea {
 input {
   height:40px;
   margin-bottom: 20px;
+  
 }
 
 textarea {
@@ -452,7 +450,7 @@ textarea {
 }
 
 .alt-send-button {
-  width: 400px;
+  width: 100%;
   height: 34px;
   transition: all .2s ease-in-out;
 }
@@ -462,18 +460,20 @@ textarea {
   margin-top: 20px;
   font: 700 12px 'Lato', sans-serif;
   letter-spacing: 2px;
+  text-align: center;
 }
 
 .alt-send-button:hover {
   transform: translate3d(0px, -29px, 0px);
 }
 
+
 #footer {
   border-top: solid 1px #fff;
   font-size: 0.75rem;
   padding: 80px 30px;
-
 }
+
 #footer .end-logo {
   width: 50px;
   align-items: center;
@@ -485,14 +485,10 @@ textarea {
 }
 
 
-
-
 @media screen and (max-width: 900px) {
-  
   .container {
     overflow: hidden;
   }
-  
   .site-title {
     font-size: 3rem;
     margin: 50px 0;
@@ -515,7 +511,7 @@ textarea {
   #profile .info-place{
     font-size: 2rem;
   }
-  
+
   #about {
     display: flex;
     flex-direction: column;
@@ -524,13 +520,13 @@ textarea {
 
   #about .img {
     margin-left: 50px;
-    width:80%;
+    width: 80%;
     justify-content: center;
   }
 
   #about .img img{
     width: 100%;
-    height:100%;
+    height: 100%;
   }
 
   #about .text {
@@ -576,17 +572,13 @@ textarea {
   #contact .icont, .iconi{
     margin-left: 20px;
   }
-  
-  .contact-wrapper {
-     justify-content: center;
-  }
-  
+
   input, textarea {
-    width:350px;
+    width: 350px;
     justify-content: center;
   }
-  
-  .send-text, .fa-paper-plane{
+
+  .send-text, .fa-paper-plane {
     align-items: center;
     justify-content: center;
   }
@@ -599,6 +591,5 @@ textarea {
 
   #footer .sns {
     margin-bottom: 30px;
-  }
-  
+  }  
 }
